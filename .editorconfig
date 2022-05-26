@@ -1,18 +1,11 @@
+# https://EditorConfig.org
+
 root = true
 
-# Unix-style newlines with a newline ending every file
 [*]
+charset = utf-8
 end_of_line = lf
+indent_size = 4
+indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
-
-# indentation
-indent_style = space
-indent_size = 2
-
-# Charset
-charset = utf-8
-
-# Markdown
-[*.md]
-trim_trailing_whitespace = false

@@ -1,0 +1,70 @@
+# https://help.github.com/en/categories/automating-your-workflow-with-github-actions
+
+name: "Test Package"
+
+on: # yamllint disable-line rule:truthy
+    push:
+        paths:
+            - "**.json"
+            - "**.js"
+    pull_request:
+        paths:
+            - "**.json"
+            - "**.js"
+
+# Enable this to use the github packages
+# yamllint disable-line rule:comments
+#env:
+#    package: "@${{ github.repository }}"
+#    registry_url: "https://npm.pkg.github.com"
+#    scope: "${{ github.repository_owner }}"
+
+jobs:
+    test:
+        name: "tests"
+
+        strategy:
+            matrix:
+                os: ["ubuntu-latest"]
+                node_version: ["16.x", "17.x"]
+                include:
+                    - os: "macos-latest"
+                      node_version: "16"
+                    - os: "windows-latest"
+                      node_version: "16"
+            fail-fast: false
+
+        runs-on: "${{ matrix.os }}"
+
+        steps:
+            - name: "Git checkout"
+              uses: "actions/checkout@v2"
+              with:
+                  fetch-depth: 0
+                  persist-credentials: false
+              env:
+                  GIT_COMMITTER_NAME: "GitHub Actions Shell"
+                  GIT_AUTHOR_NAME: "GitHub Actions Shell"
+                  EMAIL: "github-actions[bot]@users.noreply.github.com"
+
+            - uses: "pnpm/action-setup@v2.0.1"
+              with:
+                  version: 6
+
+            - name: "Set node version to ${{ matrix.node_version }}"
+              uses: "actions/setup-node@v2"
+              with:
+                  node-version: "${{ matrix.node_version }}"
+                  # Enable this to use the github packages
+                  # registry-url: "${{ env.registry_url }}"
+                  # Defaults to the user or organization that owns the workflow file
+                  # scope: "@${{ env.scope }}"
+
+            - name: "Install packages"
+              run: "pnpm install --frozen-lockfile"
+
+            - name: "Build packages"
+              run: "pnpm run build"
+
+            - name: "test"
+              run: "pnpm run test"

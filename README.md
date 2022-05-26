@@ -13,9 +13,14 @@ Standard, Specification, Schema
 npm install --save resume-schema
 ```
 ### Usage
+
+<!-- textlint-disable @textlint-rule/google/word-list -->
+
 The main export of this package is an object that validates as a [JSON schema](https://json-schema.org/understanding-json-schema/). It should work with [any compliant implementation](https://json-schema.org/implementations.html#validator-javascript).
 
-#### validation
+<!-- textlint-enable @textlint-rule/google/word-list -->
+
+#### Validation
 To determine if an object is a valid JSON resume, you can do something like this:
 
 ```js
@@ -43,13 +48,19 @@ require('resume-schema').schema;
 
 ### People
 
+<!-- textlint-disable write-good -->
+
 * Julian Shapiro for early prototype revisions
+
+<!-- textlint-enable write-good -->
 
 ### Contribute
 
-We encourage anyone who's interested in participating in evolving this standard to join us on Gitter, and/or to join the discussions [here on GitHub](https://github.com/jsonresume/resume-schema/issues). Also feel free to fork this project and submit new ideas to add to the JSON Resume Schema standard. To make sure all formatting is kept in check, please install the [EditorConfig plugin](http://editorconfig.org/) for your editor of choice.
+We encourage anyone who’s interested in participating in evolving this standard to join the discussions [here on GitHub](https://github.com/jsonresume/resume-schema/issues). Also feel free to fork this project and submit new ideas to add to the JSON Resume Schema standard. To make sure all formatting is kept in check, install the [EditorConfig plugin](https://editorconfig.org/) for your editor of choice.
 
 ### Versioning
+
+<!-- textlint-disable @textlint-rule/google/word-list,@textlint-rule/google/slashes,write-good -->
 
 JSON Resume Schema adheres to Semantic Versioning 2.0.0. If there is a violation of
 this scheme, report it as a bug. Specifically, if a patch or minor version is
@@ -60,9 +71,15 @@ a major-version release. As a result of this policy, you can (and should)
 specify any dependency on JSON Resume Schema by using the Pessimistic Version
 Constraint with two digits of precision.
 
+<!-- textlint-enable @textlint-rule/google/word-list,@textlint-rule/google/slashes,write-good -->
+
 ### Research
 
+<!-- textlint-disable no-dead-link -->
+
 - [A more professional recruitment process with structured data](/research/A%20more%20professional%20recruitment%20process%20with%20structured%20CV%20data.pdf).
+
+<!-- textlint-enable no-dead-link -->
 
 ### Proposals to reinvestigate
 
@@ -73,4 +90,4 @@ Constraint with two digits of precision.
 
 ### Other resume standards
 * [HR-XML](https://schemas.liquid-technologies.com/HR-XML/2007-04-15/)
-* [Europass](http://europass.cedefop.europa.eu/about-europass)
+* [Europass](https://europa.eu/europass/en/about-europass)

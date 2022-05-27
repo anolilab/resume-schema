@@ -1,9 +1,9 @@
 # JSON Resume Schema
 
-[![GitHub Releases](https://badgen.net/github/tag/jsonresume/resume-schema)](https://github.com/jsonresume/resume-schema/releases)
+[![GitHub Releases](https://badgen.net/github/tag/anolilab/resume-schema)](https://github.com/anolilab/resume-schema/releases)
 [![NPM Release](https://badgen.net/npm/v/resume-schema)](https://www.npmjs.com/package/resume-schema)
-[![Latest Status](https://github.com/jsonresume/resume-schema/workflows/Latest/badge.svg)](https://github.com/jsonresume/resume-schema/actions)
-[![Release Status](https://github.com/jsonresume/resume-schema/workflows/Release/badge.svg)](https://github.com/jsonresume/resume-schema/actions)
+[![Latest Status](https://github.com/anolilab/resume-schema/workflows/Latest/badge.svg)](https://github.com/anolilab/resume-schema/actions)
+[![Release Status](https://github.com/anolilab/resume-schema/workflows/Release/badge.svg)](https://github.com/anolilab/resume-schema/actions)
 
 Standard, Specification, Schema
 
@@ -58,6 +58,8 @@ require('resume-schema').schema;
 
 We encourage anyone who’s interested in participating in evolving this standard to join the discussions [here on GitHub](https://github.com/jsonresume/resume-schema/issues). Also feel free to fork this project and submit new ideas to add to the JSON Resume Schema standard. To make sure all formatting is kept in check, install the [EditorConfig plugin](https://editorconfig.org/) for your editor of choice.
 
+> **Note:** please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
+
 ### Versioning
 
 <!-- textlint-disable @textlint-rule/google/word-list,@textlint-rule/google/slashes,write-good -->
@@ -72,6 +74,12 @@ specify any dependency on JSON Resume Schema by using the Pessimistic Version
 Constraint with two digits of precision.
 
 <!-- textlint-enable @textlint-rule/google/word-list,@textlint-rule/google/slashes,write-good -->
+
+## Supported Node.js Versions
+
+Libraries in this ecosystem make a best effort to track
+[Node.js’ release schedule](https://nodejs.org/en/about/releases/). Here’s [a
+post on why we think this is important](https://medium.com/the-node-js-collection/maintainers-should-consider-following-node-js-release-schedule-ab08ed4de71a).
 
 ### Research
 
@@ -91,3 +99,7 @@ Constraint with two digits of precision.
 ### Other resume standards
 * [HR-XML](https://schemas.liquid-technologies.com/HR-XML/2007-04-15/)
 * [Europass](https://europa.eu/europass/en/about-europass)
+
+## License
+
+The anolilab resume-schema is open-sourced software licensed under the [MIT license](LICENSE.md)

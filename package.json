@@ -26,7 +26,8 @@
         "lint:text": "textlint ./.github/ISSUE_TEMPLATE/** ./README.md ./UPGRADE.md --parallel --experimental --dry-run",
         "lint:text:fix": "textlint ./.github/ISSUE_TEMPLATE/** ./README.md ./UPGRADE.md --parallel --experimental --fix",
         "lint:prettier:fix": "prettier --config=.prettierrc.cjs --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
-        "test": "vitest"
+        "test": "vitest",
+        "commit": "cz"
     },
     "devDependencies": {
         "@anolilab/eslint-config": "^4.0.7",

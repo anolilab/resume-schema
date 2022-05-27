@@ -27,3 +27,5 @@ support/root/pnpm-lock.yaml
 ./.storybook/
 
 plopfile.js
+
+README.md

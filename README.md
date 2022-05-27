@@ -1,9 +1,7 @@
 # JSON Resume Schema
 
 [![GitHub Releases](https://badgen.net/github/tag/anolilab/resume-schema)](https://github.com/anolilab/resume-schema/releases)
-[![NPM Release](https://badgen.net/npm/v/resume-schema)](https://www.npmjs.com/package/resume-schema)
-[![Latest Status](https://github.com/anolilab/resume-schema/workflows/Latest/badge.svg)](https://github.com/anolilab/resume-schema/actions)
-[![Release Status](https://github.com/anolilab/resume-schema/workflows/Release/badge.svg)](https://github.com/anolilab/resume-schema/actions)
+[![NPM Release](https://badgen.net/npm/v/@anolilab/resume-schema)](https://www.npmjs.com/package/@anolilab/resume-schema)
 
 Standard, Specification, Schema
 
@@ -12,6 +10,7 @@ Standard, Specification, Schema
 ```
 npm install --save resume-schema
 ```
+
 ### Usage
 
 <!-- textlint-disable @textlint-rule/google/word-list -->
@@ -21,12 +20,13 @@ The main export of this package is an object that validates as a [JSON schema](h
 <!-- textlint-enable @textlint-rule/google/word-list -->
 
 #### Validation
+
 To determine if an object is a valid JSON resume, you can do something like this:
 
 ```js
-import schema from 'resume-schema';
-import Ajv from 'ajv'; // validator. See https://ajv.js.org/
-import addFormats from "ajv-formats"
+import schema from "resume-schema";
+import Ajv from "ajv"; // validator. See https://ajv.js.org/
+import addFormats from "ajv-formats";
 
 const ajv = new Ajv({
     allowUnionTypes: true,
@@ -36,21 +36,21 @@ addFormats(ajv);
 
 const validate = ajv.compile(schema);
 
-validate({basics: {name: "Thomas"}}); // true
-validate({invalidProperty: "foo bar"}); // false
+validate({ basics: { name: "Thomas" } }); // true
+validate({ invalidProperty: "foo bar" }); // false
 ```
 
 The JSON Resume schema is available from:
 
 ```js
-require('resume-schema').schema;
+require("resume-schema").schema;
 ```
 
 ### People
 
 <!-- textlint-disable write-good -->
 
-* Julian Shapiro for early prototype revisions
+-   Julian Shapiro for early prototype revisions
 
 <!-- textlint-enable write-good -->
 
@@ -85,20 +85,21 @@ post on why we think this is important](https://medium.com/the-node-js-collectio
 
 <!-- textlint-disable no-dead-link -->
 
-- [A more professional recruitment process with structured data](/research/A%20more%20professional%20recruitment%20process%20with%20structured%20CV%20data.pdf).
+-   [A more professional recruitment process with structured data](/research/A%20more%20professional%20recruitment%20process%20with%20structured%20CV%20data.pdf).
 
 <!-- textlint-enable no-dead-link -->
 
 ### Proposals to reinvestigate
 
-* [#69 - Standard format for phone numbers](https://github.com/jsonresume/resume-schema/issues/69)
-* [#44 - Person-Job Fit ](https://github.com/jsonresume/resume-schema/issues/44)
-* [#12 - geotag location in work ](https://github.com/jsonresume/resume-schema/issues/12)
-* [#51 - Support multiple positions within one job](https://github.com/jsonresume/resume-schema/issues/51)
+-   [#69 - Standard format for phone numbers](https://github.com/jsonresume/resume-schema/issues/69)
+-   [#44 - Person-Job Fit ](https://github.com/jsonresume/resume-schema/issues/44)
+-   [#12 - geotag location in work ](https://github.com/jsonresume/resume-schema/issues/12)
+-   [#51 - Support multiple positions within one job](https://github.com/jsonresume/resume-schema/issues/51)
 
 ### Other resume standards
-* [HR-XML](https://schemas.liquid-technologies.com/HR-XML/2007-04-15/)
-* [Europass](https://europa.eu/europass/en/about-europass)
+
+-   [HR-XML](https://schemas.liquid-technologies.com/HR-XML/2007-04-15/)
+-   [Europass](https://europa.eu/europass/en/about-europass)
 
 ## License
 

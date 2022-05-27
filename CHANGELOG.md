@@ -1,3 +1,11 @@
+### [2.0.1](https://github.com/anolilab/resume-schema/compare/v2.0.0...v2.0.1) (2022-05-27)
+
+
+### Bug Fixes
+
+* removed preinstall from package.json ([68a670a](https://github.com/anolilab/resume-schema/commit/68a670a01351ac33018ea0a52e929da3f847a20a))
+* update @anolilab/semantic-release-preset to release package.json version to github too ([29a0c46](https://github.com/anolilab/resume-schema/commit/29a0c46f58dde02719d0daefbe5a098e9120d83c))
+
 ## [2.0.0](https://github.com/anolilab/resume-schema/compare/v1.0.0...v2.0.0) (2022-05-27)
 
 

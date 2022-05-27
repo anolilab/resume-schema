@@ -1,3 +1,14 @@
+## [2.0.0](https://github.com/anolilab/resume-schema/compare/v1.0.0...v2.0.0) (2022-05-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* Changed test to use vitest. Added new Github workflows. Fixed and added tests. Added new key to the schema.json. Created typescript type file.
+
+### Performance Improvements
+
+* upgraded the lib to the current node standard ([33f53ae](https://github.com/anolilab/resume-schema/commit/33f53ae6f9ac00bd7ed47eb1f2d7cb2e7654841e))
+
 <a id="1.0.0"></a>
 ## [WIP], Version 1.0.0
 

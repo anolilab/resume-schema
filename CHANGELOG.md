@@ -1,3 +1,10 @@
+### [2.0.2](https://github.com/anolilab/resume-schema/compare/v2.0.1...v2.0.2) (2022-05-29)
+
+
+### Bug Fixes
+
+* fixed readme and default schema export ([682038c](https://github.com/anolilab/resume-schema/commit/682038c416b160755966887130c76b6e17d85b0a))
+
 ### [2.0.1](https://github.com/anolilab/resume-schema/compare/v2.0.0...v2.0.1) (2022-05-27)
 
 

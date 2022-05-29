@@ -1,3 +1,10 @@
+### [2.0.3](https://github.com/anolilab/resume-schema/compare/v2.0.2...v2.0.3) (2022-05-29)
+
+
+### Bug Fixes
+
+* fixed readme ([7c9ef21](https://github.com/anolilab/resume-schema/commit/7c9ef2138917db1849afab3dc179cd2997e1677f))
+
 ### [2.0.2](https://github.com/anolilab/resume-schema/compare/v2.0.1...v2.0.2) (2022-05-29)
 
 

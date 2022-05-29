@@ -18,6 +18,9 @@
     "license": "MIT",
     "sideEffects": false,
     "exports": {
+        ".": {
+            "default": "./schema.json"
+        },
         "./package.json": "./package.json",
         "./schema.json": "./schema.json"
     },

@@ -8,7 +8,7 @@ Standard, Specification, Schema
 ### Getting started
 
 ```
-npm install --save resume-schema
+npm install --save @anolilab/resume-schema
 ```
 
 ### Usage
@@ -24,7 +24,7 @@ The main export of this package is an object that validates as a [JSON schema](h
 To determine if an object is a valid JSON resume, you can do something like this:
 
 ```js
-import schema from "resume-schema";
+import schema from "@anolilab/resume-schema";
 import Ajv from "ajv"; // validator. See https://ajv.js.org/
 import addFormats from "ajv-formats";
 
@@ -43,7 +43,7 @@ validate({ invalidProperty: "foo bar" }); // false
 The JSON Resume schema is available from:
 
 ```js
-require("resume-schema").schema;
+require("@anolilab/resume-schema").schema;
 ```
 
 ### People

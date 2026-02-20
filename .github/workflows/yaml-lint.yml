@@ -12,6 +12,9 @@ on: # yamllint disable-line rule:truthy
             - "**.yml"
             - "**.yaml"
 
+permissions:
+  contents: read
+
 jobs:
     yaml-lint:
         name: "Yaml lint"
@@ -19,8 +22,13 @@ jobs:
         runs-on: "ubuntu-latest"
 
         steps:
+            - name: Harden the runner (Audit all outbound calls)
+              uses: step-security/harden-runner@5ef0c079ce82195b2a36a210272d6b661572d83e # v2.14.2
+              with:
+                egress-policy: audit
+
             - name: "Git checkout"
-              uses: "actions/checkout@v2"
+              uses: "actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5" # v2.7.0
               with:
                   fetch-depth: 2
               env:
@@ -29,7 +37,7 @@ jobs:
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
             - name: "Lint YAML files"
-              uses: "ibiqlik/action-yamllint@v3"
+              uses: "ibiqlik/action-yamllint@2576378a8e339169678f9939646ee3ee325e845c" # v3.1.1
               with:
                   config_file: ".yamllint.yaml"
                   file_or_dir: "."

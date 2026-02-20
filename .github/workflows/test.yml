@@ -19,6 +19,9 @@ on: # yamllint disable-line rule:truthy
 #    registry_url: "https://npm.pkg.github.com"
 #    scope: "${{ github.repository_owner }}"
 
+permissions:
+  contents: read
+
 jobs:
     test:
         name: "tests"
@@ -37,8 +40,13 @@ jobs:
         runs-on: "${{ matrix.os }}"
 
         steps:
+            - name: Harden the runner (Audit all outbound calls)
+              uses: step-security/harden-runner@5ef0c079ce82195b2a36a210272d6b661572d83e # v2.14.2
+              with:
+                egress-policy: audit
+
             - name: "Git checkout"
-              uses: "actions/checkout@v2"
+              uses: "actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5" # v2.7.0
               with:
                   fetch-depth: 0
                   persist-credentials: false
@@ -47,12 +55,12 @@ jobs:
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
-            - uses: "pnpm/action-setup@v2.0.1"
+            - uses: "pnpm/action-setup@646cdf48217256a3d0b80361c5a50727664284f2" # v2.0.1
               with:
                   version: 6
 
             - name: "Set node version to ${{ matrix.node_version }}"
-              uses: "actions/setup-node@v2"
+              uses: "actions/setup-node@7c12f8017d5436eb855f1ed4399f037a36fbd9e8" # v2.5.2
               with:
                   node-version: "${{ matrix.node_version }}"
                   # Enable this to use the github packages
